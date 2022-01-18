@@ -35,7 +35,7 @@ function create(i) {
   // Set size amd color of confetti piece. 
   let width = Math.random() * 8;
   let height = width * 0.4;
-  //if you want more colors, change the numer here and set the case numbers the same. 
+  //if you want more colors, change the numer here and set the case numbers. 
   let colourIdx = Math.ceil(Math.random() * 4);
   let colour;
   switch(colourIdx) {
@@ -59,12 +59,13 @@ function create(i) {
 function drop(i){
 document.getElementById("confetti-"+i).animate(
    [
-    {top : -Math.random()*20+"%", left : '50%'},//Starts in the middle and slightly above. 
-    {top: '100%', left : Math.random()*100+'%' } //Stop at the bottom of div and anywhere left to right. 
+    {top : -Math.random()*80+"%", left : '50%'},//Starts in the middle and slightly above. 
+    {top: '95%', left : Math.random()*95+'%', transform:'rotate('+(Math.random()*2-1)*360+'deg)' } //Stop at the bottom of div and anywhere left to right. 
   ], Math.random()*2000 + 2000);
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
 }
 </script>
+
 
  
 
