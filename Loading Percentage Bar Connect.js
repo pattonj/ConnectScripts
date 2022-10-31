@@ -59,6 +59,11 @@ if(document.getElementById("tbl_SID1081_CBID5876_CDID4943") != null){
 			document.getElementById("BC_pbar_innerdiv").style.width = percentage + "%";
 			document.getElementById("BC_pbar_innertext").innerText = percentage + "%" + " complete";
 			document.getElementById("BC_Progress_Bar").style.display="";
+			document.getElementById("BC_pbar_innerdiv").animate(
+                           [
+				{width : '0%'},
+                        	{width: percentage +'%'}
+                          ],2000);
 		}
 	}
 	//For Completes
@@ -132,6 +137,11 @@ if(document.getElementById("tbl_SID1081_CBID5876_CDID4943") != null){
 		document.getElementById("BC_Pbar_message").innerHTML = myMessage;
 		document.getElementById("BC_Pbar_message").style.display="block";
 		document.getElementById("BC_Progress_Bar").style.display="";
+		document.getElementById("BC_pbar_innerdiv").animate(
+                           [              
+                                {width : '0%'},
+                                {width: percentage +'%'}
+                          ],4000);
 		
 		}
 
